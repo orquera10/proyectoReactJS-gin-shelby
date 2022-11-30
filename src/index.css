@@ -1,13 +1,26 @@
-body {
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Cinzel, sans-serif;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  color: white;
+  background-color: black;
+}
+h3{
+  font-weight: bolder;
+}
+.btnContacto{
+  font-weight: bolder;
+}
+.encabezado{
+  min-width: 90vw;
+}
+.seccionPublicidad{
+  background-image: url(/public/images/fondoPubli.png);
+  background-size: cover;
+  background-position: center;
+}
+.tarTexto{
+  max-width: 500px;
 }
