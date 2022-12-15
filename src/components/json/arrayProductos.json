@@ -1,0 +1,83 @@
+[
+    {
+        "id":1, 
+        "nombre": "Pink Dry Gin 750cc",
+        "descripcion": "Botánicos: Enebro · Coriandro · Pimienta rosa · Cardamomo · Mora · Frutilla · Arándano · Pétalos de rosa. Maduración: 45 días. Alcohol base: Alcohol de caña.",
+        "imagen":"/images/pinkGin750.jpg",
+        "precio": 2850,
+        "stock": 200,
+        "categoria": "botellas"
+    },
+    {
+        "id":2, 
+        "nombre": "London Dry Gin 750cc",
+        "descripcion": "Botánicos:  Enebro · Coriandro · Pimienta rosa · Pimienta verde · Pieles cítricas (limón, pomelo, naranja) · Raíz de angélica · Cardamomo. Maduración: 45 días. Alcohol base: Alcohol de caña.",
+        "imagen":"/images/londonDryGin.jpg",
+        "precio": 2850,
+        "stock": 200,
+        "categoria": "botellas"
+    },
+    {
+        "id":3, 
+        "nombre": "Tafí Dry Gin 750cc",
+        "descripcion": "Botánicos: Enebro · Coriandro · Pimienta rosa · Rosa mosqueta · Incayuyo · Burro · Cedrón · Muña muña. Maduración: 45 días. Alcohol base: Alcohol de caña.",
+        "imagen":"/images/tafiDryGin.jpg",
+        "precio": 2850,
+        "stock": 200,
+        "categoria": "botellas"
+    },
+    {
+        "id":4, 
+        "nombre": "Pink Dry Gin 200cc",
+        "descripcion": "Botánicos: Enebro · Coriandro · Pimienta rosa · Cardamomo · Mora · Frutilla · Arándano · Pétalos de rosa. Maduración: 45 días. Alcohol base: Alcohol de caña.",
+        "imagen":"/images/pinkGin200.jpg",
+        "precio": 750,
+        "stock": 150,
+        "categoria": "botellas"
+    },
+    {
+        "id":5, 
+        "nombre": "London Dry Gin 200cc",
+        "descripcion": "Botánicos:  Enebro · Coriandro · Pimienta rosa · Pimienta verde · Pieles cítricas (limón, pomelo, naranja) · Raíz de angélica · Cardamomo. Maduración: 45 días. Alcohol base: Alcohol de caña.",
+        "imagen":"/images/londonDryGin200.jpg",
+        "precio": 750,
+        "stock": 150,
+        "categoria": "botellas"
+    },
+    {
+        "id":6, 
+        "nombre": "Tafí Dry Gin 200cc",
+        "descripcion": "Botánicos: Enebro · Coriandro · Pimienta rosa · Rosa mosqueta · Incayuyo · Burro · Cedrón · Muña muña. Maduración: 45 días. Alcohol base: Alcohol de caña.",
+        "imagen":"/images/tafiDryGin200.jpg",
+        "precio": 750,
+        "stock": 150,
+        "categoria": "botellas"
+    },
+    {
+        "id":7, 
+        "nombre": "Pink Dry Gin Lata",
+        "descripcion": "Botánicos: Enebro · Coriandro · Pimienta rosa · Cardamomo · Mora · Frutilla · Arándano · Pétalos de rosa. Maduración: 45 días. Alcohol base: Alcohol de caña.",
+        "imagen":"/images/pinkGinLata.jpg",
+        "precio": 550,
+        "stock": 150,
+        "categoria": "latas"
+    },
+    {
+        "id":8, 
+        "nombre": "London Dry Gin Lata",
+        "descripcion": "Botánicos:  Enebro · Coriandro · Pimienta rosa · Pimienta verde · Pieles cítricas (limón, pomelo, naranja) · Raíz de angélica · Cardamomo. Maduración: 45 días. Alcohol base: Alcohol de caña.",
+        "imagen":"/images/londonDryGinLata.jpg",
+        "precio": 550,
+        "stock": 150,
+        "categoria": "latas"
+    },
+    {
+        "id":9, 
+        "nombre": "Shelby Gin TriPack Botellines",
+        "descripcion": "Combo de tres botellines tapa corono de 200cc, unidos por una cartulina con imágenes de la marca. Esta presentación contiene tres estilos diferentes: London Dry, Pink y Tafí.",
+        "imagen":"/images/triPack.jpg",
+        "precio": 1550,
+        "stock": 100,
+        "categoria": "especiales"
+    }
+]
