@@ -1,12 +1,14 @@
 import React from "react";
 import CartWidget from "./CarWidget";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
     return (
         <div className="d-flex justify-content-center align-items-center flex-column container">
             <div className="position-relative encabezado d-flex justify-content-center">
-                <img src="/images/logo.png" alt="Logo Gin Shelby" width={142} className="my-4"/>
+                <Link to={"/"}>
+                    <img src="/images/logo.png" alt="Logo Gin Shelby" width={142} className="my-4"/>
+                </Link>
                 <div className="position-absolute top-50 end-0">
                     <CartWidget/>
                 </div>

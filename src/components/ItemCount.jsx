@@ -1,33 +1,40 @@
-import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-const ItemCount = ({stockItem}) => {
+const ItemCount = ({stock, onAdd}) => {
     
     const [counter, setCounter] = useState(1);
-    const [stock, setStock] = useState(stockItem);
+    const [stockItem, setStockItem] = useState(stock);
+    const [vendido, setVendido] = useState(false);
 
     useEffect(()=>{
-        setStock(stockItem)
-    },[stockItem])
+        setStockItem(stock)
+    },[stock])
+
+    console.log(stock);
 
     const incrementarStock = () =>{
-        if (counter < stock) {
+        if (counter < stockItem) {
             setCounter(counter+1)
         }
     }
+
     const decrementarStock = () =>{
         if (counter > 1){
            setCounter(counter-1) 
         }
         
     }
-    const onAdd = () =>{
-        if (counter <= stock){
-            setStock(stock - counter)
-            setCounter(1)
-            console.log("Agregaste "+counter+" Productos al Carrito!")
-        }
+    const addToCar = (cantidad) =>{
+        setVendido(true)
+        setStockItem(stockItem-cantidad)
+        onAdd(cantidad)
+        setCounter(1)
+        // if (counter <= stock){
+        //     setStock(stock - counter)
+        //     setCounter(1)
+        //     console.log("Agregaste "+counter+" Productos al Carrito!")
+        // }
         
     }
     return (
@@ -43,7 +50,9 @@ const ItemCount = ({stockItem}) => {
             </div>
             <div className="row d-flex justify-content-center">
                 <div>
-                    <button type="button" className="btn btn-dark btn-outline-light fw-bold"  onClick={onAdd}>Agrgar al Carrito</button>
+                    {vendido ? <Link to={"/cart"} className="btn btn-dark btn-outline-light fw-bold">Terminar mi compra</Link> :
+                    <button type="button" className="btn btn-dark btn-outline-light fw-bold"  onClick={()=>{addToCar(counter)}}>Agregar al Carrito</button>
+                    }
                 </div>
             </div> 
         </div>
