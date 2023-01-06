@@ -11,7 +11,6 @@ const ItemCount = ({stock, onAdd}) => {
         setStockItem(stock)
     },[stock])
 
-    console.log(stock);
 
     const incrementarStock = () =>{
         if (counter < stockItem) {
