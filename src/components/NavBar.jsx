@@ -40,6 +40,7 @@ const NavBar = () => {
                     </div>
                 </nav>
             </div>
+            <div className="linea"></div>
         </div>
     );
 }

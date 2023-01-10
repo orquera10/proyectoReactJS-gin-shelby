@@ -1,27 +1,15 @@
 import React, { useState, useEffect }  from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
-//import arrayProductos from "./json/arrayProductos.json"
 import {doc, getDoc, getFirestore} from "firebase/firestore"
+import Loading from "./Loading";
 
 
 const ItemDetailContainer = () => {
     
     const [item, setItem] = useState({})
     const {id} = useParams()
-    
-    //Promesa que accede con un JSON con un Array de objetos
-    // useEffect(() => {
-    //     const promesa = new Promise((resolve) =>{
-            
-    //         setTimeout(() => {
-    //             resolve(arrayProductos.find(elemento => elemento.id === parseInt(id)));
-    //         }, 2000);
-    //     });
-    //     promesa.then((data) => {
-    //         setItem(data);
-    //     })
-    // }, [id])
+    const [loading, setLoading] = useState(true);
 
     //Consultar Firestore por id
     useEffect(()=>{
@@ -33,12 +21,13 @@ const ItemDetailContainer = () => {
             } else{
                 console.log("Error, no se encontro el documento!!!");
             }
+        setLoading(false);
         })
     },[id])
 
     return(
         <div className="container my-4">
-            <ItemDetail item={item}/>
+            {loading ? <Loading/> : <ItemDetail item={item}/>}
         </div>
     )
 }

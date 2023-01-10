@@ -25,16 +25,10 @@ const ItemCount = ({stock, onAdd}) => {
         
     }
     const addToCar = (cantidad) =>{
-        setVendido(true)
-        setStockItem(stockItem-cantidad)
-        onAdd(cantidad)
-        setCounter(1)
-        // if (counter <= stock){
-        //     setStock(stock - counter)
-        //     setCounter(1)
-        //     console.log("Agregaste "+counter+" Productos al Carrito!")
-        // }
-        
+        setVendido(true);
+        setStockItem(stockItem-cantidad);
+        onAdd(cantidad);
+        setCounter(1);
     }
     return (
         <div className="my-3">

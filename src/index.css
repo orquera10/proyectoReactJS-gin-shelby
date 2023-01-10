@@ -24,3 +24,43 @@ h3{
 .tarTexto{
   max-width: 500px;
 }
+.linea{
+  height: 1px;
+  width: 100%;
+  background-color: white;
+}
+.lineaColor{
+  height: 10px;
+  width: 100%;
+  display: flex;
+}
+.color1{
+  background-color: #E3DDCD;
+  width: 33%;
+  height: 100%;
+}
+.color2{
+  background-color: #9FCDB1;
+  width: 34%;
+  height: 100%;
+}
+.color3{
+  background-color: #E8B0B1;
+  width: 33%;
+  height: 100%;
+}
+.bi-facebook:hover{
+  color: #4b9fff !important;
+  transition: all 0.5s;
+}
+.bi-instagram:hover{
+  color: #E8B0B1 !important;
+  transition: all 0.5s;
+}
+.twitter:hover{
+  color: #87c9ff !important;
+  transition: all 0.5s;
+}
+.tickets{
+  max-width: 700px;
+}
