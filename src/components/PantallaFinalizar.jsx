@@ -5,19 +5,24 @@ import {doc, getDoc, getFirestore} from "firebase/firestore"
 const  PantallaFinalizar = () => {
     const {id} =useParams();
     const [orden, setOrden] = useState({});  
+    const [nombre, setNombre] = useState("");
+    const [items, setItems] = useState([]);
 
     useEffect(()=>{
         const db = getFirestore()
         const documento = doc(db, "orders", id)
         getDoc(documento).then((snapshot)=>{
             if (snapshot.exists()) {
-                setOrden({id:snapshot.id, ...snapshot.data()})
+                setOrden({id:snapshot.id, ...snapshot.data()});
+                setNombre(snapshot.data().buyer.name);
+                setItems(snapshot.data().items)
             } else{
                 console.warn("Error, no se encontro la orden!!!");
             }
         })
+        
     },[id])
-
+    
     return(
         
         <div className="container my-5 d-flex flex-column align-items-center">
@@ -27,11 +32,11 @@ const  PantallaFinalizar = () => {
                     <img src={"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+orden.id} alt="codigo qr" width={200} className="my-4"/>
                     <div className="px-4">
                         <h5>Codigo: {orden.id}</h5>
-                        <h5>Nombre: {orden.buyer.name}</h5>
+                        <h5>Nombre: {nombre}</h5>
                         <h5>Fecha: {orden.date}</h5>
                         <h5>Productos:</h5>
-                        <div className="text-end" key={id}>
-                            {orden.items.map(item=>(<h6>{item.quantity} {item.title} ${item.price_total}</h6>))}
+                        <div className="text-end">
+                            {items.map(item=>(<h6 key={item.id}>{item.quantity} {item.title} ${item.price_total}</h6>))}
                         </div>
                         <h5 className="text-end"><b>Total: ${orden.total}</b></h5>
                     </div>
