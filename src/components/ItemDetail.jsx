@@ -6,11 +6,11 @@ import ItemCount from "./ItemCount";
 const ItemDetail = ({item}) => {
     const {addItem} = useContext(CartContext)
 
-    // const [stockItem, setStockItem] = useState(0)
     const onAdd = (cantidad) =>{
         addItem(item, cantidad);
         
     }
+    
     return(
         
         <div className="row my-5">

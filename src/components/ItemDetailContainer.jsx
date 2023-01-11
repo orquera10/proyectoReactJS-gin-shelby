@@ -11,7 +11,6 @@ const ItemDetailContainer = () => {
     const {id} = useParams()
     const [loading, setLoading] = useState(true);
 
-    //Consultar Firestore por id
     useEffect(()=>{
         const db = getFirestore()
         const documento = doc(db, "items", id)

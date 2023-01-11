@@ -9,7 +9,6 @@ const Contacto = () =>{
     const [telefono, setTelefono] = useState("");
     const [contacto, setContacto] = useState("");
 
-    
     const generarContacto = () => {
         const fecha = new Date();
         const contacto = {
@@ -22,12 +21,7 @@ const Contacto = () =>{
         addDoc(orderColection, contacto).then((snapshot) => {
             setContacto(snapshot.id);
         }); 
-    // limpiarContacto(); 
     }
-
-    // const limpiarContacto = () =>{
-    //     setContacto({});
-    // }
 
     return(
         <div className="bg-contacto">

@@ -24,7 +24,6 @@ const  PantallaFinalizar = () => {
     },[id])
     
     return(
-        
         <div className="container my-5 d-flex flex-column align-items-center">
             <div className="d-flex flex-column align-items-center p-4 text-black bg-light border rounded-4 tickets">
                 <h2 className="my-4 text-center"><b>Felicidades por tu pedido</b></h2>

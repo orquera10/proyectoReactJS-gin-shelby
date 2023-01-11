@@ -29,11 +29,7 @@ const Cart = () => {
                         </div>
                         <div className="table-responsive">
                             <table className="table text-white">
-
                                 <thead>
-                                    {/* <tr>
-                                    <th scope="col" className="text-center" colSpan={5}><Link onClick={()=>{clear()}} className="btn btn-dark btn-outline-light fw-bold" title="Vaciar Carrito">Vaciar Carrito</Link></th>
-                                </tr> */}
                                     <tr>
                                         <th scope="col">&nbsp;</th>
                                         <th scope="col">Producto</th>
@@ -57,7 +53,6 @@ const Cart = () => {
                                         <th className="text-center align-middle">Suma Total</th>
                                         <th className="text-center align-middle"><b>${sumTotal()}</b></th>
                                         <th scope="col">&nbsp;</th>
-                                        {/* <th className="text-end"><Link to={"/checkout"} className="btn btn-dark btn-outline-light fw-bold" title="finalizar compra">Finalizar Compra</Link></th> */}
                                     </tr>
                                 </tbody>
                             </table>
@@ -70,8 +65,6 @@ const Cart = () => {
             </div>
         )
     }
-
-    
 }
 
 export default Cart;

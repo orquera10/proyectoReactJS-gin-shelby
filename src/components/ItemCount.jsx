@@ -8,19 +8,18 @@ const ItemCount = ({stock, onAdd}) => {
     const [vendido, setVendido] = useState(false);
 
     useEffect(()=>{
-        setStockItem(stock)
+        setStockItem(stock);
     },[stock])
-
 
     const incrementarStock = () =>{
         if (counter < stockItem) {
-            setCounter(counter+1)
+            setCounter(counter+1);
         }
     }
 
     const decrementarStock = () =>{
         if (counter > 1){
-           setCounter(counter-1) 
+           setCounter(counter-1); 
         }
         
     }
@@ -49,7 +48,6 @@ const ItemCount = ({stock, onAdd}) => {
                 </div>
             </div> 
         </div>
-        
     )
 }
 

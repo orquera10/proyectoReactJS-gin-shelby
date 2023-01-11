@@ -25,10 +25,8 @@ const Checkout = () => {
             setOrderId(snapshot.id);
 
             clear();
-        });
-        
+        });   
     }
-    
     
     return (
 

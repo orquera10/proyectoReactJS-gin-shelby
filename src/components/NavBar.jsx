@@ -13,7 +13,6 @@ const NavBar = () => {
                     <CartWidget/>
                 </div>
             </div>
-            
             <div className="d-flex justify-content-center text-center">
                 <nav className="navbar navbar-expand-lg navbar-dark bg-black">
                     <div className="container d-flex justify-content-center">
