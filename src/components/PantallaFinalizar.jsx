@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import {doc, getDoc, getFirestore} from "firebase/firestore"
 
 const  PantallaFinalizar = () => {
@@ -36,14 +36,15 @@ const  PantallaFinalizar = () => {
                         <h5>Fecha: {orden.date}</h5>
                         <h5>Productos:</h5>
                         <div className="text-end">
-                            {items.map(item=>(<h6 key={item.id}>{item.quantity} {item.title} ${item.price_total}</h6>))}
+                            {items.map(item=>(<h6 key={item.id}>{item.quantity} - {item.title} - ${item.price_total}</h6>))}
                         </div>
                         <h5 className="text-end"><b>Total: ${orden.total}</b></h5>
                     </div>
                 </div>
             </div>
             <div className="text-center mt-5">
-                <button className="btn btn-dark btn-outline-light fw-bold" onClick={()=>{window.print()}}>Imprimir</button>
+                <Link to={"/"} className="btn btn-dark btn-outline-light fw-bold me-3" title="ir al inicio">Volver al Inicio</Link>
+                <button className="btn btn-dark btn-outline-light fw-bold ms-3" onClick={()=>{window.print()}}>Imprimir</button>
             </div>
         </div>
     )

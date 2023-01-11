@@ -8,6 +8,8 @@ import CartContextProvider from "./components/context/CartContext";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
 import PantallaFinalizar from "./components/PantallaFinalizar";
+import Contacto from "./components/Contacto";
+import ContactoGuardado from "./components/ContactoGuardado";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
             <Route path={"/checkout"} element={<Checkout />} />
             <Route path={"/detalle/:id"} element={<PantallaFinalizar />} />
             <Route path={"*"} element={<Error404 />} />
+            <Route path={"/contacto"} element={<Contacto/>} /> 
+            <Route path={"/success"} element={<ContactoGuardado/>} />            
           </Routes>
           <Footer />
         </BrowserRouter>

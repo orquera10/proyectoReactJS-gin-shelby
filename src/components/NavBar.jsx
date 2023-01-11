@@ -7,7 +7,7 @@ const NavBar = () => {
         <div className="d-flex justify-content-center align-items-center flex-column container">
             <div className="position-relative encabezado d-flex justify-content-center">
                 <Link to={"/"}>
-                    <img src="/images/logo.png" alt="Logo Gin Shelby" width={142} className="my-4"/>
+                    <img src="/images/logo.png" alt="Logo Gin Shelby" width={142} className="my-4 logo"/>
                 </Link>
                 <div className="position-absolute top-50 end-0">
                     <CartWidget/>
