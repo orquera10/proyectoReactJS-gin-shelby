@@ -1,10 +1,10 @@
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import React, { useContext, useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { CartContext } from "./context/CartContext";
 
 const Checkout = () => {
-    const {cart, sumTotal, clear, cartTotal} = useContext(CartContext);
+    const {cart, sumTotal, clear} = useContext(CartContext);
     const [nombre, setNombre] = useState("");
     const [email, setEmail] = useState("");
     const [telefono, setTelefono] = useState("");
@@ -27,7 +27,6 @@ const Checkout = () => {
             clear();
         });   
     }
-    if (cartTotal() !== 0) {
         return (
             <div className="container">
                 <div className="row my-5 d-flex flex-md-row flex-column-reverse">
@@ -73,22 +72,7 @@ const Checkout = () => {
 
                 {orderId ? <Navigate to={"/detalle/" + orderId} /> : ""}
             </div>
-        )
-    } else {
-        return(
-            <div className="container py-5">
-                <div className="row">
-                    <div className="col-md-12 text-center">
-                        <div className="alert alert-danger" role="alert">
-                            <b>No se encontraron productos en el carrito de compras!</b>
-                        </div>
-                        <Link to={"/"} className="btn btn-dark btn-outline-light fw-bold" title="ir al inicio">Volver al Inicio</Link>
-                    </div>
-                </div>
-        </div>
-        )
-    }
-    
+        )    
 }
 
 export default Checkout;
