@@ -10,6 +10,7 @@ import Checkout from "./components/Checkout";
 import PantallaFinalizar from "./components/PantallaFinalizar";
 import Contacto from "./components/Contacto";
 import ContactoGuardado from "./components/ContactoGuardado";
+import ScrollTo from "./components/ScrollTo";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path={"/contacto"} element={<Contacto/>} /> 
             <Route path={"/success"} element={<ContactoGuardado/>} />            
           </Routes>
+          <ScrollTo />
           <Footer />
         </BrowserRouter>
       </div>

@@ -8,11 +8,12 @@ const Contacto = () =>{
     const [email, setEmail] = useState("");
     const [telefono, setTelefono] = useState("");
     const [contacto, setContacto] = useState("");
+    const [mensaje, setMensaje] = useState("");
 
     const generarContacto = () => {
         const fecha = new Date();
         const contacto = {
-            datos: {name:nombre, email:email, phone:telefono},
+            datos: {name:nombre, email:email, phone:telefono, mensaje:mensaje},
             date: `${fecha.getDate()}/${fecha.getMonth()+1}/${fecha.getFullYear()} | ${fecha.getHours()}:${fecha.getMinutes()}:${fecha.getSeconds()}`
         }
 
@@ -40,6 +41,10 @@ const Contacto = () =>{
                             <div className="mb-3">
                                 <label htmlFor="telefono" className="form-label">Telefono</label>
                                 <input type="tel" className="form-control" id="telefono" placeholder="Ingrese su Telefono" onInput={(e)=>{setEmail(e.target.value)}}/>
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor="floatingTextarea2">Mensaje</label>
+                                <textarea className="form-control" id="floatingTextarea2" placeholder="Escribe tu mensaje aqui" onInput={(e) => {setMensaje(e.target.value)}}></textarea>
                             </div>
                             <div className="text-end mt-5">
                                 <button type="button" className="btn btn-dark btn-outline-light fw-bold" onClick={generarContacto}>Enviar Datos</button>

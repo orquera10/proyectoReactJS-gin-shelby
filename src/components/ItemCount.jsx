@@ -29,6 +29,7 @@ const ItemCount = ({stock, onAdd}) => {
         onAdd(cantidad);
         setCounter(1);
     }
+
     return (
         <div className="my-3">
             <div className="row mb-3 d-flex justify-content-center">
