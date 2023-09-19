@@ -11,6 +11,7 @@ import PantallaFinalizar from "./components/PantallaFinalizar";
 import Contacto from "./components/Contacto";
 import ContactoGuardado from "./components/ContactoGuardado";
 import ScrollTo from "./components/ScrollTo";
+import LoginScreen from "./components/LoginScreen/LoginScreen";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
         <BrowserRouter>
           <NavBar />
           <Routes>
-            <Route path={"/"} element={<ItemListContainer />} />
+            <Route path={"/"} element={<LoginScreen />} />
+            <Route path={"/products"} element={<ItemListContainer />} />
             <Route path={"/category/:id"} element={<ItemListContainer />} />
             <Route path={"/item/:id"} element={<ItemDetailContainer />} />
             <Route path={"/cart"} element={<Cart />} />
